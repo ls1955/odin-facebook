@@ -1,11 +1,1 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  body: MyText
-  like_amount: 1
-  author: one
-
-two:
-  body: MyText
-  like_amount: 1
-  author: two
