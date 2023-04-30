@@ -66,6 +66,7 @@ group :development do
   # gem "spring"
 
   gem "guard"
+  gem "guard-minitest"
 end
 
 group :test do
