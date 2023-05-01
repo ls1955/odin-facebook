@@ -1,5 +1,5 @@
 class StrangersController < ApplicationController
   def index
-    @strangers = User.strangers
+    @strangers = current_user.strangers
   end
 end
