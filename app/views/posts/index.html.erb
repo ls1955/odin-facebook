@@ -1,4 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<h2>Hello <%= current_user.email %></h2>
+
+<div>
+  <%= link_to "New post", new_post_path %>
+</div>
+
+<div>
+  <%= link_to "Discover new friends", strangers_path %>
+</div>
 
 <h1>Posts</h1>
 
@@ -10,5 +18,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New post", new_post_path %>
