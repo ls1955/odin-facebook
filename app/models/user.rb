@@ -15,4 +15,8 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
   has_many :inverse_friendships, class_name: "Friendship", foreign_key: "friend_id"
   has_many :inverse_friends, through: :inverse_friendships, source: :user
+
+  def strangers
+    User.where.not(id: [id] + friends.pluck(:id) + inverse_friends.pluck(:id))
+  end
 end
