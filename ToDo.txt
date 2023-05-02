@@ -6,14 +6,20 @@ Implementation
 
 * Only show remove post button for post owner
 * Delete friend_request after being accepted ??
+* At strangers#index, only show user who do not
+  have any association(not friend, no friend request
+  between user).
 
-Refactor / Improve
+Refactor / Improvement
 
 * User#stranger ??
+  -> Test if return desired result
+* FriendRequest::pending
+  -> Sounds weird. Might rename or move it to other place
 
 Idea
 
-* After accepted friend_request ??
+* After accepted friend_request
   -> Destroy friend_request
   -> Create a new friendship
-    -> Redirect to page
+  -> Redirect to page
