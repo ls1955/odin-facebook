@@ -1,4 +1,8 @@
 class FriendRequestsController < ApplicationController
+  def index
+    @friend_requests = current_user.received_friend_requests
+  end
+
   def create
     @friend_request = FriendRequest.new friend_request_params
 

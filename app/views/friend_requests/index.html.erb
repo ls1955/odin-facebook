@@ -1,0 +1,8 @@
+<h1>Friend Requests</h1>
+
+<% @friend_requests.each do |request| %>
+  <div id="<%= dom_id request %>">
+    <p><%= request.sender.email %></p>
+    <%= button_to "Decline", request, method: :delete %>
+  </div>
+<% end%>
