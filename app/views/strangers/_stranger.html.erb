@@ -1,3 +1,7 @@
 <div id="dom_id stranger">
   <p><%= stranger.email %></p>
+  <%= button_to "Send friend request",
+                friend_requests_path(friend_request: { sender_id: current_user.id,
+                                                       receiver_id: stranger.id }),
+                method: :post %>
 </div>
