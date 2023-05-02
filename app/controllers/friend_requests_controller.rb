@@ -1,4 +1,6 @@
 class FriendRequestsController < ApplicationController
+  before_action :set_friend_request, only: :destroy
+
   def index
     @friend_requests = current_user.received_friend_requests
   end
@@ -14,13 +16,16 @@ class FriendRequestsController < ApplicationController
   end
 
   def destroy
-    @friend_request = FriendRequest.find(params[:id])
     @friend_request.destroy
 
     redirect_to friend_requests_path, notice: "Friend request has been deleted."
   end
 
   private
+
+  def set_friend_request
+    @friend_request = FriendRequest.find(params[:id])
+  end
 
   def friend_request_params
     params.require(:friend_request).permit(:sender_id, :receiver_id)
