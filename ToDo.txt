@@ -1,0 +1,19 @@
+Clean Up
+
+* Remove requests table status column ??
+
+Implementation
+
+* Only show remove post button for post owner
+* Delete friend_request after being accepted ??
+
+Refactor / Improve
+
+* User#stranger ??
+
+Idea
+
+* After accepted friend_request ??
+  -> Destroy friend_request
+  -> Create a new friendship
+    -> Redirect to page
