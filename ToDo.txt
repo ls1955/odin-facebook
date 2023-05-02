@@ -14,8 +14,10 @@ Refactor / Improvement
 
 * User#stranger ??
   -> Test if return desired result
-* FriendRequest::pending
-  -> Sounds weird. Might rename or move it to other place
+* FriendRequest::pending sounds weird. Might rename
+  or move it to other place
+* FriendRequestsController#accept involve creation
+  of friendship. Considering creating FriendshipsController.
 
 Idea
 

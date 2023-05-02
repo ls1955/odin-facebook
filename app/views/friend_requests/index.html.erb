@@ -4,5 +4,6 @@
   <div id="<%= dom_id request %>">
     <p><%= request.sender.email %></p>
     <%= button_to "Decline", request, method: :delete %>
+    <%= button_to "Accept", accept_friend_request_path(request) %>
   </div>
 <% end%>

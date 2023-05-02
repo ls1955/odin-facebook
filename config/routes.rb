@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   resources :users, only: :index
   resources :strangers, only: :index
-  resources :friend_requests, only: %i[index create destroy]
+  resources :friend_requests, only: %i[index create destroy] do
+    member do
+      post :accept
+    end
+  end
   resources :posts
 
   root "posts#index"
