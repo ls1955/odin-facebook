@@ -25,3 +25,8 @@ Idea
   -> Destroy friend_request
   -> Create a new friendship
   -> Redirect to page
+
+Optimization
+
+* Usage of turbo-frame, stimulus
+* Keep track of possible N + 1 problems
