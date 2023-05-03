@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: %i[show edit update destroy]
+  before_action :set_post, only: %i[show edit update destroy like]
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.includes(:author).all
+    @posts = Post.includes(:author).all.order(created_at: :desc)
   end
 
   # GET /posts/1 or /posts/1.json
@@ -56,6 +56,12 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def like
+    @post.like_amount += 1
+    @post.save
+    redirect_to posts_path, notice: "You have liked the post."
   end
 
   private

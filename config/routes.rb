@@ -9,7 +9,11 @@ Rails.application.routes.draw do
       post :accept
     end
   end
-  resources :posts
+  resources :posts do
+    member do
+      patch :like
+    end
+  end
 
   root "posts#index"
 end

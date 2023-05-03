@@ -1,5 +1,11 @@
 <div id="<%= dom_id post %>">
-  <p>By <%= post.author.email %></p>
-  <p><%= post.body %></p>
-  <p>Like amount: <%= post.like_amount %></p>
+  <div>
+    <p>By <%= post.author.email %></p>
+    <p><%= post.body %></p>
+    <p>Like amount: <%= post.like_amount %></p>
+  </div>
+
+  <div class="action">
+    <%= button_to "Like", like_post_path(post), method: :patch %>
+  </div>
 </div>
