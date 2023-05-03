@@ -1,3 +1,5 @@
 <div id="<%= dom_id post %>">
-  <%= post.body %>
+  <p>By <%= post.author.email %></p>
+  <p><%= post.body %></p>
+  <p>Like amount: <%= post.like_amount %></p>
 </div>
