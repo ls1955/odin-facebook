@@ -1,8 +1,15 @@
-<h1>New post</h1>
+<h1>Create post</h1>
 
-<%= render "form", post: @post %>
+<%= form_with model: @post do |form| %>
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_field :body %>
+  </div>
 
-<br>
+  <div class="action">
+    <%= form.submit "Post" %>
+  </div>
+<% end %>
 
 <div>
   <%= link_to "Back to posts", posts_path %>
