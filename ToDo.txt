@@ -5,7 +5,6 @@ Clean Up
 Implementation
 
 * Only show remove post button for post owner
-* Delete friend_request after being accepted ??
 * At strangers#index, only show user who do not
   have any association(not friend, no friend request
   between user).
@@ -14,17 +13,12 @@ Refactor / Improvement
 
 * User#stranger ??
   -> Test if return desired result
-* FriendRequest::pending sounds weird. Might rename
-  or move it to other place
-* FriendRequestsController#accept involve creation
-  of friendship. Considering creating FriendshipsController.
-
-Idea
-
-* After accepted friend_request
-  -> Destroy friend_request
-  -> Create a new friendship
-  -> Redirect to page
+* FriendRequest::pending sounds weird. Might rename or move it to other place
+* FriendRequestsController#accept involve creation of friendship.
+  Consider creating FriendshipsController.
+* Consider creating Like model, which link a user with post.
+  user_id and post_id will be composite primary key.
+  Purporse of this model is to ensure user could only like a post once.
 
 Optimization
 
