@@ -1,9 +1,12 @@
-<h1>New comment</h1>
+<%= form_with model: @comment do |form| %>
+  <%= form.hidden_field :post_id, value: params[:post_id] %>
+  <%= form.hidden_field :author_id, value: current_user.id %>
 
-<%= render "form", comment: @comment %>
+  <div class="field">
+    <%= form.text_area :body %>
+  </div>
 
-<br>
-
-<div>
-  <%= link_to "Back to comments", comments_path %>
-</div>
+  <div class="action">
+    <%= form.submit "Comment" %>
+  </div>
+<% end %>
