@@ -24,3 +24,7 @@ Optimization
 
 * Usage of turbo-frame, stimulus
 * Keep track of possible N + 1 problems
+
+Database
+
+* Column user_id of posts table change to author_id for consistency
