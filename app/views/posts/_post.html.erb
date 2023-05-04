@@ -1,12 +1,23 @@
 <div id="<%= dom_id post %>">
-  <div>
+  <div class="content">
     <p>By <%= post.author.email %></p>
     <p><%= post.body %></p>
     <p>Like amount: <%= post.like_amount %></p>
   </div>
 
-  <div class="action">
+  <div class="actions">
     <%= button_to "Like", like_post_path(post), method: :patch %>
     <%= button_to "Comment", new_comment_path, method: :get, params: { post_id: post.id } %>
+  </div>
+
+  <div class="comments">
+    <% if post.comments.empty? %>
+      <p>There is no comment for this post.</p>
+    <% else %>
+      <% post.comments.each do |comment| %>
+        <p><%= comment.body%></p>
+        <p>By <%= comment.author.email %></p>
+      <% end %>
+    <% end %>
   </div>
 </div>
