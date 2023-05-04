@@ -33,3 +33,4 @@ Bug
 Database
 
 * Column user_id of posts table change to author_id for consistency
+  -> As such, we could remove foreign_key in post.rb
