@@ -25,6 +25,11 @@ Optimization
 * Usage of turbo-frame, stimulus
 * Keep track of possible N + 1 problems
 
+Bug
+
+* Calling User#comments will select all the comments from the posts
+  created by user, instead of selecting all the comments created by user.
+
 Database
 
 * Column user_id of posts table change to author_id for consistency
