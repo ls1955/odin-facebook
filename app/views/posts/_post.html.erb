@@ -7,5 +7,6 @@
 
   <div class="action">
     <%= button_to "Like", like_post_path(post), method: :patch %>
+    <%= button_to "Comment", new_comment_path, method: :get, params: { post_id: post.id } %>
   </div>
 </div>
