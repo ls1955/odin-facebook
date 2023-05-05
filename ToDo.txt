@@ -19,6 +19,7 @@ Refactor / Improvement
 * Consider creating Like model, which link a user with post.
   user_id and post_id will be composite primary key.
   Purporse of this model is to ensure user could only like a post once.
+* Post::relevent scope, is it appropriate?
 
 Optimization
 
