@@ -1,4 +1,10 @@
 class ProfilesController < ApplicationController
+  include ActiveStorage::SetCurrent
+
+  def show
+    @profile = current_user.profile
+  end
+
   def new
     @profile = Profile.new
   end
@@ -16,6 +22,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:profile_image, :biography)
+    params.require(:profile).permit(:profile_picture, :biography)
   end
 end
