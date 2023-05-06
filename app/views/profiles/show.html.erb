@@ -1,0 +1,14 @@
+<h1>You profile</h1>
+
+<% if @profile.profile_picture.present? %>
+  <%= image_tag @profile.profile_picture.representation(resize_to_limit: [400, 400]) %>
+<% else %>
+  <p>No image here</p>
+<% end %>
+
+<h2>Biography</h2>
+<% unless @profile.biography.blank? %>
+  <p>@profile.biography</p>
+<% else %>
+  <p>Nothing here.</p>
+<% end %>
