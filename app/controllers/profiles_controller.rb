@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   include ActiveStorage::SetCurrent
 
-  before_action :set_profile, %i[show edit update]
+  before_action :set_profile, only: %i[show edit update]
 
   def show
   end
