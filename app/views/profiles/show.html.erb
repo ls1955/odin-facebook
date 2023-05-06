@@ -8,7 +8,7 @@
 
 <h2>Biography</h2>
 <% unless @profile.biography.blank? %>
-  <p>@profile.biography</p>
+  <%= @profile.biography %>
 <% else %>
   <p>Nothing here.</p>
 <% end %>
