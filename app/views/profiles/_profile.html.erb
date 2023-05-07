@@ -1,12 +1,17 @@
-<% if profile.profile_picture.present? %>
-  <%= image_tag profile.profile_picture.representation(resize_to_limit: [400, 400]) %>
-<% else %>
-  <p>No image here</p>
-<% end %>
+<% if profile.present? %>
+  <% if profile.profile_picture.present? %>
+    <%= image_tag profile.profile_picture.representation(resize_to_limit: [400, 400]) %>
+  <% else %>
+    <p>No image here</p>
+  <% end %>
 
-<h2>Biography</h2>
-<% unless profile.biography.blank? %>
-  <%= profile.biography %>
+  <h2>Biography</h2>
+  <% unless profile.biography.blank? %>
+    <%= profile.biography %>
+  <% else %>
+    <p>Nothing here.</p>
+  <% end %>
 <% else %>
-  <p>Nothing here.</p>
+  <p>Looks like you hasn't create a profile yet.</p>
+  <%= link_to "Create a profile", new_profile_path %>
 <% end %>

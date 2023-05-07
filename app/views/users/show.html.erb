@@ -1,9 +1,4 @@
-<% if @user.profile.present? %>
-  <%= render "profiles/profile", profile: @user.profile %>
-<% else %>
-  <p>Looks like you hasn't create a profile yet.</p>
-  <%= link_to "Create a profile", new_profile_path %>
-<% end %>
+<%= render "profiles/profile", profile: @user.profile %>
 
 <% if @user.posts.present? %>
   <%= render @user.posts, partial: "posts/post" %>
