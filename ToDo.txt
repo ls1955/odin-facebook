@@ -22,6 +22,8 @@ Refactor / Improvement
   user_id and post_id will be composite primary key.
   Purporse of this model is to ensure user could only like a post once.
 * Post::relevent scope, is it appropriate?
+* Create partial like posts/_comment, posts/_comment_collection,
+  posts/_post_collection, etc...
 
 Optimization
 
@@ -36,7 +38,7 @@ Bug
 Database
 
 * Column user_id of posts table change to author_id for consistency
-  -> As such, we could remove foreign_key in post.rb
+  -> As such, we could remove foreign_key option in post.rb
 
 Task
 
