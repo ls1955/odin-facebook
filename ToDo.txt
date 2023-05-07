@@ -38,7 +38,6 @@ Database
 
 Task
 
-* Extract _profile partial
 * Render partial from UsersController#show
 * Don't forget the route and view
 
