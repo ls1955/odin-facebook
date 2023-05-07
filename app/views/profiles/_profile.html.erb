@@ -1,12 +1,6 @@
 <% if profile.present? %>
   <%= render "profiles/picture", picture: profile.profile_picture %>
-
-  <h2>Biography</h2>
-  <% unless profile.biography.blank? %>
-    <%= profile.biography %>
-  <% else %>
-    <p>Nothing here.</p>
-  <% end %>
+  <%= render "profiles/biography", biography: profile.biography %>
 <% else %>
   <p>Looks like you hasn't create a profile yet.</p>
   <%= link_to "Create a profile", new_profile_path %>
