@@ -10,6 +10,7 @@ Implementation
 * At strangers#index, only show user who do not
   have any association(not friend, no friend request
   between user).
+* Include other omniauth providers such as google and github
 
 Refactor / Improvement
 
@@ -39,11 +40,6 @@ Database
 
 * Column user_id of posts table change to author_id for consistency
   -> As such, we could remove foreign_key option in post.rb
-
-Task
-
-* Render partial from UsersController#show
-* Don't forget the route and view
 
 View
 
