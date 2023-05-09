@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
-  resources :users, only: %i[index show]
+  resources :users, only: :show
   resources :strangers, only: :index
   resources :friend_requests, only: %i[index create destroy] do
     member do
