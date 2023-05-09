@@ -15,10 +15,8 @@
     <p style="color: red"><%= alert %></p>
 
     <div class="nav-bar">
-      <% if current_user %>
-        <%= link_to "Homepage", root_path %>
-        <%= link_to "Signout", destroy_user_session_path, data: { "turbo-method": :delete } %>
-      <% end %>
+      <%= link_to "Homepage", root_path %>
+      <%= link_to "Signout", destroy_user_session_path, data: { "turbo-method": :delete } %>
     </div>
 
     <%= yield %>
