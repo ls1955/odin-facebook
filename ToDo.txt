@@ -1,6 +1,5 @@
 Clean Up
 
-* Remove requests table status column ??
 * Remove UsersController#index, since StangersController#index
   has taken care of desired feature.
 
