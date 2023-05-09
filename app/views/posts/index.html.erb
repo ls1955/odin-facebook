@@ -1,28 +1,30 @@
-<div class="side-bar">
-  <div>
-    <%= link_to "New post", new_post_path %>
+<div class="main-container">
+  <div class="sidebar-container">
+    <div>
+      <%= link_to "New post", new_post_path %>
+    </div>
+  
+    <div>
+      <%= link_to "Discover new friends", strangers_path %>
+    </div>
+  
+    <div>
+      <%= link_to "Friend requests", friend_requests_path %>
+    </div>
+  
+    <div>
+      <%= link_to current_user.email, user_path(current_user) %>
+    </div>
   </div>
+  
+  <div class="posts-container">
+    <h1>Posts</h1>
 
-  <div>
-    <%= link_to "Discover new friends", strangers_path %>
+    <div id="posts">
+      <% @posts.each do |post| %>
+        <%= render post %>
+        <p><%= link_to "Show this post", post %></p>
+      <% end %>
+    </div>
   </div>
-
-  <div>
-    <%= link_to "Friend requests", friend_requests_path %>
-  </div>
-
-  <div>
-    <%= link_to current_user.email, user_path(current_user) %>
-  </div>
-</div>
-
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
 </div>

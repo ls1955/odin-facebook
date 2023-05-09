@@ -1,0 +1,28 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.sidebar-container {
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    margin: 20px;
+}
+
+.sidebar-container a {
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.sidebar-container a:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+
+.posts-container {
+    grid-column: 2 / -2;
+    grid-row: 1 / -1;
+}
