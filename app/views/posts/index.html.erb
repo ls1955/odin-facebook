@@ -1,17 +1,19 @@
-<div>
-  <%= link_to "New post", new_post_path %>
-</div>
+<div class="side-bar">
+  <div>
+    <%= link_to "New post", new_post_path %>
+  </div>
 
-<div>
-  <%= link_to "Discover new friends", strangers_path %>
-</div>
+  <div>
+    <%= link_to "Discover new friends", strangers_path %>
+  </div>
 
-<div>
-  <%= link_to "Friend requests", friend_requests_path %>
-</div>
+  <div>
+    <%= link_to "Friend requests", friend_requests_path %>
+  </div>
 
-<div>
-  <%= link_to current_user.email, user_path(current_user) %>
+  <div>
+    <%= link_to current_user.email, user_path(current_user) %>
+  </div>
 </div>
 
 <h1>Posts</h1>
