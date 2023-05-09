@@ -24,16 +24,12 @@ Optimization
 
 * Usage of turbo-frame, stimulus
 * Keep track of possible N + 1 problems
+* Allow user to like the posts without doing a full page reload
 
 Bug
 
 * Calling User#comments will select all the comments from the posts
   created by user, instead of selecting all the comments created by user.
-
-Database
-
-* Column user_id of posts table change to author_id for consistency
-  -> As such, we could remove foreign_key option in post.rb
 
 View
 

@@ -8,7 +8,7 @@
 
 10.times do |i|
   User.create(email: "user#{i}@coldmail.com", password: "kuma123")
-  Post.create(body: "Hello.", user_id: i)
+  Post.create(body: "Hello.", author_id: i)
 end
 
 (2..9).each { |i| FriendRequest.create(sender_id: 1, receiver_id: i) }

@@ -23,7 +23,7 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: %i[facebook]
 
   has_one :profile
-  has_many :posts
+  has_many :posts, foreign_key: "author_id"
   has_many :comments, foreign_key: "author_id"
   has_many :friend_requests, foreign_key: "receiver_id"
   has_many :sent_friend_requests, foreign_key: :sender_id, class_name: "FriendRequest"
