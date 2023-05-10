@@ -26,3 +26,49 @@
     grid-column: 2 / -2;
     grid-row: 1 / -1;
 }
+
+.post .content {
+    border: 1px solid;
+    padding: 10px;
+}
+
+.post .content .email {
+    font-weight: bold;
+}
+
+.post .content .body {
+    background-color: rgb(238, 238, 238);
+    font-size: 2rem;
+    padding: 10px 5px;
+}
+
+.post .actions {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.post .actions a {
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+
+    flex: 1;
+}
+
+.post .actions a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.post .comment {
+    background-color: rgb(240, 240, 240);
+    border: 1px solid;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    padding: 10px;
+    width: 80%;
+}

@@ -18,13 +18,8 @@
   </div>
   
   <div class="posts-container">
-    <h1>Posts</h1>
-
     <div id="posts">
-      <% @posts.each do |post| %>
-        <%= render post %>
-        <p><%= link_to "Show this post", post %></p>
-      <% end %>
+      <%= render @posts %>
     </div>
   </div>
 </div>
