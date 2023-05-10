@@ -1,18 +1,18 @@
 <div id="<%= dom_id post %>" class="post">
   <div class="content">
-    <p>By <%= post.author.email %></p>
+    <h2><%= post.author.email %></h2>
     <p><%= post.body %></p>
     <p>Like amount: <%= post.like_amount %></p>
   </div>
 
   <div class="actions">
-    <%= button_to "Like", like_post_path(post), method: :patch %>
-    <%= button_to "Comment", new_comment_path, method: :get, params: { post_id: post.id } %>
+    <%= link_to "Like", like_post_path(post), data: { "turbo-method" => :patch } %>
+    <%= link_to "Comment", new_comment_path(post_id: post.id), data: { "turbo-method" => :get } %>
   </div>
 
   <div class="comments">
     <% if post.comments.empty? %>
-      <p>There is no comment for this post.</p>
+      <p style="text-align: center;">There is no comment for this post.</p>
     <% else %>
       <% post.comments.each do |comment| %>
         <p><%= comment.body%></p>
