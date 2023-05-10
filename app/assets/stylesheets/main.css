@@ -36,6 +36,11 @@ html, body {
     text-decoration: none;
 }
 
-.nav-bar a:hover {
+.nav-bar a:hover:not(.header-logo) {
     text-decoration: underline;
+}
+
+.nav-bar .header-logo {
+    font-size: 3rem;
+    font-weight: bolder;
 }
