@@ -73,6 +73,9 @@ group :development do
 
   gem "guard"
   gem "guard-minitest"
+
+  # Preview the email in the default browser instead of sending it
+  gem "letter_opener"
 end
 
 group :test do
