@@ -33,6 +33,7 @@ html, body {
 
 .nav-bar a {
     color: rgb(255, 255, 255);
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
@@ -43,4 +44,14 @@ html, body {
 .nav-bar .header-logo {
     font-size: 3rem;
     font-weight: bolder;
+}
+
+.nav-bar .container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-bar .container h2 {
+    padding-right: 20px;
 }
