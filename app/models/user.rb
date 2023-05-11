@@ -33,11 +33,19 @@ class User < ApplicationRecord
   has_many :inverse_friendships, class_name: "Friendship", foreign_key: "friend_id"
   has_many :inverse_friends, through: :inverse_friendships, source: :user
 
+  after_create :send_welcome_email
+
   def strangers
     User.where.not(id: [id] + all_friends.pluck(:id) + FriendRequest.pending(self).pluck(:sender_id, :receiver_id))
   end
 
   def all_friends
     User.where(id: friend_ids + inverse_friend_ids)
+  end
+
+  private
+
+  def send_welcome_email
+    UserMailer.with(user: self).welcome_email.deliver_later
   end
 end
