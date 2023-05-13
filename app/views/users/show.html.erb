@@ -1,7 +1,9 @@
 <%= render "profiles/profile", profile: @user.profile %>
 
-<% if @user.posts.present? %>
-  <%= render @user.posts, partial: "posts/post" %>
-<% else %>
-  <p>You hasn't create any posts yet.</p>
-<% end %>
+<div class="profile-posts-container">
+  <% if @user.posts.present? %>
+    <%= render @user.posts, partial: "posts/post" %>
+  <% else %>
+    <p>You hasn't create any posts yet.</p>
+  <% end %>
+</div>
