@@ -40,9 +40,7 @@ CSS
 * login page
 * signup page
 * posts#create
-* strangers#index
 * friend_requests#index
-* profile#show
 
 Main task
 

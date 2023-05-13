@@ -1,4 +1,4 @@
-<div id="dom_id stranger">
+<div id="dom_id stranger" class="stranger-container">
   <p><%= stranger.email %></p>
   <%= button_to "Send friend request",
                 friend_requests_path(friend_request: { sender_id: current_user.id,

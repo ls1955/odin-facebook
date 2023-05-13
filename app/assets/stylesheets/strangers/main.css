@@ -1,0 +1,23 @@
+.strangers-container {
+    margin-left: 50px;
+}
+
+.stranger-container {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid;
+    font-size: 1.5rem;
+    margin: 10px;
+    max-width: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stranger-container button {
+    font-size: 1.25rem;
+}
+
+.stranger-container button:hover {
+    background-color: rgb(197, 47, 36);
+}
