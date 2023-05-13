@@ -9,7 +9,7 @@ Implementation
 Refactor / Improvement
 
 * User#stranger ??
-  -> Test if return desired result
+  - Test if return desired result
 * FriendRequest::pending sounds weird. Might rename or move it to other place
 * FriendRequestsController#accept involve creation of friendship.
   Consider creating FriendshipsController.
@@ -43,3 +43,8 @@ CSS
 * strangers#index
 * friend_requests#index
 * profile#show
+
+Extra Credit
+
+* Make post allow image (either via URL or an actual image file)
+* Make post to be either text OR photo via polymorphic association
