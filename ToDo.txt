@@ -34,3 +34,12 @@ Bug
 View
 
 * Move profile up to top header bar ??
+
+CSS
+
+* login page
+* signup page
+* posts#create
+* strangers#index
+* friend_requests#index
+* profile#show
