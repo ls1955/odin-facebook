@@ -44,6 +44,11 @@ CSS
 * friend_requests#index
 * profile#show
 
+Main task
+
+* Deploy the app
+* Set up email provider
+
 Extra Credit
 
 * Make post allow image (either via URL or an actual image file)
