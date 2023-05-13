@@ -1,7 +1,9 @@
-<% if profile.present? %>
-  <%= render "profiles/picture", picture: profile.profile_picture %>
-  <%= render "profiles/biography", biography: profile.biography %>
-<% else %>
-  <p>Looks like you hasn't create a profile yet.</p>
-  <%= link_to "Create a profile", new_profile_path %>
-<% end %>
+<div class="profile-container">
+  <% if profile.present? %>
+    <%= render "profiles/picture", picture: profile.profile_picture %>
+    <%= render "profiles/biography", biography: profile.biography %>
+  <% else %>
+    <h3>Looks like you hasn't create a profile yet.</h3>
+    <%= link_to "Create a profile", new_profile_path %>
+  <% end %>
+</div>

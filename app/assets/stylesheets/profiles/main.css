@@ -1,0 +1,12 @@
+.profile-container {
+    background-color: rgb(238, 238, 238);
+    padding: 50px;
+    margin: 50px;
+    max-width: 500px;
+}
+
+.bio-container {
+    background-color: rgb(250, 250, 250);
+    font-size: 1.25rem;
+    padding: 25px;
+}

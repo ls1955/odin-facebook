@@ -1,9 +1,9 @@
 <h2>Biography</h2>
 
-<% unless biography.blank? %>
-  <div class="container">
-    <%= biography %>
-  </div>
-<% else %>
-  <p>Nothing here.</p>
-<% end %>
+<div class="bio-container">
+  <% unless biography.blank? %>
+      <%= biography %>
+  <% else %>
+    <p>This person does not have a bio.</p>
+  <% end %>
+</div>
